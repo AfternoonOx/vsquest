@@ -27,7 +27,6 @@ namespace VsQuest
             selectRandomCount = attributes["selectrandomcount"].AsInt(1);
             quests = attributes["quests"].AsArray<string>();
 
-            // simple randomizer that will always select the same quests for each entityId
             if (selectRandom)
             {
                 int seed = unchecked((int)entity.EntityId);
@@ -86,7 +85,7 @@ namespace VsQuest
         public void SendQuestInfoMessageToClient(ICoreServerAPI sapi, EntityPlayer player)
         {
             var questSystem = sapi.ModLoader.GetModSystem<QuestSystem>();
-            var activeQuests = questSystem.getPlayerQuests(player.PlayerUID, sapi).FindAll(quest => quest.questGiverId == entity.EntityId);
+            var activeQuests = questSystem.GetPlayerQuests(player.PlayerUID).FindAll(quest => quest.questGiverId == entity.EntityId);
             var availableQuestIds = new List<string>();
             foreach (var questId in quests)
             {

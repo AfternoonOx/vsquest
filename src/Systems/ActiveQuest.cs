@@ -94,6 +94,21 @@ namespace VsQuest
                                     {
                                         sapi.World.PlaySoundFor(new AssetLocation(actionObj.args[2]), byPlayer);
                                     }
+
+                                    if (actionObj.args.Length > 3 && !string.IsNullOrEmpty(actionObj.args[3]))
+                                    {
+                                        string command = actionObj.args[3];
+                                        var parts = command.Split(' ');
+                                        if (parts.Length == 4 && parts[0].ToLower() == "add" && parts[2].ToLower() == "to")
+                                        {
+                                            if (int.TryParse(parts[1], out int amountToAdd))
+                                            {
+                                                string varName = parts[3];
+                                                int currentValue = byPlayer.Entity.WatchedAttributes.GetInt(varName, 0);
+                                                byPlayer.Entity.WatchedAttributes.SetInt(varName, currentValue + amountToAdd);
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

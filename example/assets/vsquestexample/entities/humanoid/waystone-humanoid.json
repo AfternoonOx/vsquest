@@ -1,0 +1,94 @@
+{
+	"code": "waystone-humanoid",
+	"class": "EntityTrader",
+	"canClimb": true,
+	"hitboxSize": { "x": 0.6, "y": 1.75 },
+	"deadHitboxSize": { "x": 0.75, "y": 0.5 },
+	"behaviorConfigs": {
+		"nametag": {
+			"showtagonlywhentargeted": true,
+			"triggeredNameReveal": true,
+			"unrevealedDisplayName": "Человек"
+		}
+	},
+	"client": {
+		"renderer": "Shape",
+		"shape": { "base": "entity/humanoid/trader" },
+		"texture": { "base": "entity/humanoid/trader", "alternates": [
+			{ "base": "entity/humanoid/traderclothes/set1" }
+		] },
+		"behaviors": [
+			{ "code": "nametag" },
+			{ "code": "repulseagents" },
+			{ "code": "controlledphysics", "stepHeight": 1.01 },
+			{ "code": "interpolateposition" },
+			{ "code": "conversable", "dialogue": "config/dialogue/waystone-humanoid" }
+		],
+		"animations": [
+			{
+				"code": "die",
+				"animation": "die",
+				"animationSpeed": 1.75,
+				"weight": 10,
+				"blendMode": "AddAverage"
+			},
+			{
+				"code": "hurt",
+				"animation": "hurt",
+				"animationSpeed": 2,
+				"blendMode": "AddAverage"
+			},
+			{ "code": "formal-walk", "animation": "formal-walk", "animationSpeed": 1.5 }
+		]
+	},
+	"attributes": {
+		"tradePropsFile": "config/tradelists/trader-treasurehunter",
+		"tradeProps": {
+			"money": { "avg": 30, "var": 10 }
+		}
+	},
+	"server": {
+		"attributes": {
+			"pathfinder": {
+				"minTurnAnglePerSec": 720,
+				"maxTurnAnglePerSec": 1440
+			}
+		},
+		"behaviors": [
+			{ "code": "nametag", "showtagonlywhentargeted": true, "selectFromRandomName": ["Человек чебурек"] },
+			{ "code": "repulseagents" },
+			{ "code": "controlledphysics", "stepHeight": 1.01 },
+			{ "code": "reviveondeath", "minHours": 0, "maxHours": 0 },
+			{ "code": "health", "currenthealth": 10, "maxhealth": 10 },
+			{
+				"code": "taskai",
+				"aitasks": [
+					{
+						"code": "idle",
+						"priority": 1.2,
+						"minduration": 2500,
+						"maxduration": 2500,
+						"mincooldown": 2000,
+						"maxcooldown": 10000,
+						"animation": "laugh"
+					},
+					{
+						"code": "idle",
+						"priority": 1.2,
+						"minduration": 2500,
+						"maxduration": 2500,
+						"mincooldown": 5000,
+						"maxcooldown": 30000,
+						"animation": "idle2"
+					},
+					{
+						"code": "lookaround",
+						"priority": 0.5
+					}
+				]
+			},
+			{ "code": "conversable", "dialogue": "config/dialogue/waystone-humanoid" }
+		]
+	},
+	"sounds": {}
+}

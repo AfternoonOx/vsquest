@@ -1,9 +1,9 @@
 {
 	"item-creature-questgiver": "Questgiver",
 	
-    "quest1-title": "Kill drifters and gather bony soil",
-    "quest1-desc": "Kill 2 drifters and gather 1 bony soil. If you succeed I have another mission for you. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. \nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
-    "quest1-obj": "Gathered bony soil: {0}/1<br>Killed drifters: {1}/2",
+    "quest1-title": "Большие вкусные тыковки коллект зем",
+    "quest1-desc": "Тыковка большая и маленькая .",
+    "quest1-obj": "Собрано тыковок: {0}/2",
     "quest2-title": "Kill drifters",
     "quest2-desc": "Kill 3 drifters.",
     "quest2-obj": "Killed drifters: {0}/3",
@@ -28,5 +28,21 @@
     "vsquestexample:vanish-obj": "Poof",
     "testcommands-title": "Test commands",
     "testcommands-desc": "Be smart dude !!!!.",
-    "testcommands-obj": "Talked to: {0}/2"
+    "testcommands-obj": "Talked to: {0}/2",
+
+    "dialogue-waystone-humanoid-firstmeet": "Чё надо?",
+	"dialogue-waystone-humanoid-welcomeback": "Опять ты...",
+	"dialogue-waystone-humanoid-whatiselse": "Неважно, забей...",
+	"dialogue-waystone-humanoid-who": "Эм... ты кто вообще?",
+	"dialogue-waystone-humanoid-whoexplained": "...",
+	"dialogue-waystone-humanoid-who2": "У тебя имя есть хоть?",
+	"dialogue-waystone-humanoid-examine": "[Осмотреть человека, пытаясь заметить что-нибудь примечательное...]",
+	"dialogue-waystone-humanoid-examineexplained": "[Похож на чебурека, брух]",
+	"dialogue-waystone-humanoid-wave": "[Помахать рукой перед лицом чебурека, пытаясь вызвать хоть какую-то реакцию.]",
+	"dialogue-waystone-humanoid-waveexplained": "[Она не реагирует, но в глазах мелькает раздражение...]",
+	"dialogue-waystone-humanoid-waveexplained2": "[Без предупреждения она даёт вам подзатыльник, оставляя здоровенный синяк!]",
+	"dialogue-waystone-humanoid-waveexplained3": "[Без предупреждения её кулак впечатывается вам в живот, выбивая весь воздух из лёгких!]",
+	"dialogue-waystone-humanoid-waveexplained4": "[Без предупреждения она врезает ногой прямо в живот! Ауч!]",
+	"dialogue-waystone-humanoid-waveexplained5": "!!!",
+	"dialogue-waystone-humanoid-changeclass": "I want to change my class."
 }

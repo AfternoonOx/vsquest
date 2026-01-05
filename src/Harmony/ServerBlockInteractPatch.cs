@@ -19,7 +19,7 @@ namespace VsQuest.Harmony
             if (questSystem == null) return;
 
             int[] position = new int[] { blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z };
-            questSystem.getPlayerQuests(player.PlayerUID, sapi).ForEach(quest => quest.OnBlockUsed(__instance.Code.Path, position, player, sapi));
+            questSystem.GetPlayerQuests(player.PlayerUID).ForEach(quest => quest.OnBlockUsed(__instance.Code.Path, position, player, sapi));
         }
     }
 }
